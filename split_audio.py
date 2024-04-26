@@ -23,7 +23,7 @@ def load_settings(config_path):
 def get_device_info():
     if torch.cuda.is_available():
         print('CUDA is available. Running on GPU.')
-        return 'cuda', "float16"
+        return 'cuda', "float32"
     else:
         print('CUDA is not available. Running on CPU.')
         return 'cpu', "int8"
